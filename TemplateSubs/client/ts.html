@@ -1,0 +1,48 @@
+<template name="TemplateSubs">
+
+    <h2>Template Subscriptions</h2>
+
+    <div class="mdl-grid">
+
+        <div class="mdl-cell mdl-cell--1-col-phone mdl-cell--2-col-tablet mdl-cell--2-col-desktop">
+            <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
+                Click Me
+            </button>
+
+        </div>
+
+        <div class="mdl-cell mdl-cell--3-col-phone mdl-cell--6-col-tablet mdl-cell--10-col-desktop">
+            {{#if Template.subscriptionsReady}}
+                <p>People have clicked the button {{latestCount}} times. Uses Template subscriptions to share the
+                    counter.</p>
+            {{else}}
+                <p>Loading...</p>
+            {{/if}}
+
+        </div>
+
+    </div>
+
+
+    <div class="mdl-grid">
+
+        <div class="mdl-cell mdl-cell--1-col-phone mdl-cell--2-col-tablet mdl-cell--2-col-desktop">
+            <h3>History</h3>
+        </div>
+
+        <div class="mdl-cell mdl-cell--3-col-phone mdl-cell--6-col-tablet mdl-cell--10-col-desktop">
+            {{#if Template.subscriptionsReady}}
+                {{#each history}}
+                    <article>
+                        {{updatedAt}} - {{count}}
+                    </article>
+                {{/each}}
+
+            {{else}}
+                <p>Loading...</p>
+            {{/if}}
+
+        </div>
+
+    </div>
+</template>

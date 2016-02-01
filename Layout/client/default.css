@@ -1,0 +1,67 @@
+
+
+/*
+.mdl-grid {
+    border-style: dotted;
+    border-color: red;
+    border-width: thin;
+}
+
+.mdl-cell {
+    border-style: dashed;
+    border-width: thin;
+    border-color: blueviolet;
+}
+
+*/
+
+
+body {
+    background-color: rgb(250,250,250);
+}
+
+.home-button {
+    /* Make it feel like a button */
+    cursor: pointer;
+}
+
+.mdl-card {
+    margin-top: 24px;
+}
+
+.card-heading {
+    font-size: 2.0em;
+    color: rgba(0, 0, 0, 0.54);
+}
+
+
+.vertical-centre-parent {
+    position: relative;
+}
+
+.centre-vertically {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.centre-horizontally-fa {
+    width: 26px;
+    margin-left:auto;
+    margin-right: auto;
+}
+
+.centre-horizontally {
+    width: 100%;
+    margin-left:auto;
+    margin-right: auto;
+}
+
+.footer.mdl-mini-footer {
+    padding-top: 4px;
+    padding-bottom: 4px;
+}
+
+.status-dot {
+    margin-left: 40px;
+}

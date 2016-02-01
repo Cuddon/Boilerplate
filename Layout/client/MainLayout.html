@@ -1,0 +1,28 @@
+<template name="MainLayout">
+
+    <!-- Material Design Lite layout wrapper -->
+    <!-- Fixed header -->
+
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+
+        {{> Header}}
+
+        {{> SideBar }}
+
+        <main class="mdl-layout__content">
+            <div class="mdl-grid">
+                <div class="mdl-cell mdl-cell--hide-phone mdl-cell--2-col-tablet mdl-cell--2-col-desktop"></div>
+
+                <div class="mdl-cell mdl-cell--4-col-phone mdl-cell--4-col-tablet mdl-cell--8-col-desktop">
+                    {{>Template.dynamic template=content}}
+                </div>
+
+                <div class="mdl-cell mdl-cell--hide-phone mdl-cell--2-col-tablet mdl-cell--2-col-desktop"></div>
+            </div>
+        </main>
+
+        {{> Footer}}
+
+    </div>
+
+</template>
