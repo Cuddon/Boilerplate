@@ -1,0 +1,36 @@
+<template name="ModelsList">
+
+    <h2>List of Models</h2>
+
+    {{#if Template.subscriptionsReady}}
+
+        {{#each category in categories}}
+            <h4>Category: {{category}}</h4>
+            <div class="row">
+                {{#each recordsInCategory category}}
+                    <div class="col s12 m6 l4">
+                        <div class="model-card card">
+                            <div class="card-image">
+                                <img src="/images/flower.jpg">
+                                <span class="card-title">{{name}}</span>
+                            </div>
+                            <div class="card-content">
+                                <small>{{version}}</small>
+                                <p>{{description}}</p>
+                            </div>
+                            <div class="card-action">
+                                <a href="#">This is a link</a>
+                            </div>
+                        </div>
+                    </div>
+                {{/each}}
+            </div>
+        {{/each}}
+
+    {{else}}
+        {{> Loading}}
+    {{/if}}
+
+    <a class="model-create-button btn-floating btn-large waves-effect waves-light red"><i class="material-icons">add</i></a>
+
+</template>

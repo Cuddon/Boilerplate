@@ -1,0 +1,14 @@
+<template name="ModelCreate">
+    {{> BackTo target="models list"}}
+
+    <h2>Create a new model</h2>
+
+    {{#if Template.subscriptionsReady}}
+
+        {{> quickForm collection="Models" type="method" meteormethod="modelCreate" id="modelCreateForm" buttonContent="Save" fields=fieldsToInclude}}
+
+    {{else}}
+        {{> Loading}}
+    {{/if}}
+
+</template>

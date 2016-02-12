@@ -4,11 +4,13 @@
 
 Meteor.startup(function() {
 
-    // Nme of the app
-    var appName = 'Boilerplate App';
+    // Name of the app
+    var appName = 'ReduxOne';
 
     Session.setDefault("appName", appName);
     document.title = appName;
 
+    // Materialize
+    AutoForm.setDefaultTemplate('materialize');
 });
 

@@ -4,8 +4,8 @@
 
 FlowRouter.notFound = {
 
-    action: function(params, queryParams) {
-        BlazeLayout.render("MainLayout", {content: "NotFound", path: FlowRouter.current().path});
+    action: function() {
+        BlazeLayout.render("PublicLayout", {content: "NotFound", path: FlowRouter.current().path});
     }
 
 };

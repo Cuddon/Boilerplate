@@ -12,7 +12,7 @@ FlowRouter.route('/rv', {
     }],
 
     action: function(params, queryParams) {
-        BlazeLayout.render("MainLayout", {content: "ReactiveVar"});
+        BlazeLayout.render("PublicLayout", {content: "ReactiveVar"});
     },
 
     // Functions to run before another route is loaded. List of functions

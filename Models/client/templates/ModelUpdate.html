@@ -1,0 +1,15 @@
+<template name="ModelUpdate">
+
+    {{> BackTo target=model.name}}
+
+    <h2>Update a model's details</h2>
+
+    {{#if Template.subscriptionsReady}}
+
+        {{> quickForm collection="Models" doc=model type="method" meteormethod="modelUpdate" id="modelUpdateForm" buttonContent="Update" fields=fieldsToInclude}}
+
+    {{else}}
+        {{> Loading}}
+    {{/if}}
+
+</template>

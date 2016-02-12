@@ -65,3 +65,14 @@ body {
 .status-dot {
     margin-left: 40px;
 }
+
+/* Add an asterisk to required fields in autoForm */
+[data-required] label:after {
+    content: '*';
+    color: red;
+}
+
+.fart {
+    color: mediumvioletred;
+    width: 50%
+}

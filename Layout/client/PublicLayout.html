@@ -1,0 +1,12 @@
+<template name="PublicLayout">
+    <!-- For content not requiring user authentication -->
+
+    {{> Header}}
+
+    <main class="container">
+        {{>Template.dynamic template=content}}
+    </main>
+
+    {{> Footer}}
+
+</template>

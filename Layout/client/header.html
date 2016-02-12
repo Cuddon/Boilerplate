@@ -1,26 +1,19 @@
 <template name="Header">
 
-    <header class="mdl-layout__header default-primary-color primary-text-color">
-
-        <!-- Top header row, always visible -->
-        <div class="mdl-layout__header-row">
-
-            <!-- Title block, this can contain an img -->
-            <span class="home-button mdl-layout-title mdl-color-text--primary-contrast">{{appName}}</span>
-
-            <!-- Align nav links and icons to the right -->
-            <div class="mdl-layout-spacer"></div>
-
-            <!-- Navigation. We hide it in small screens. -->
-            <nav class="mdl-navigation mdl-layout--large-screen-only">
-                <a class="mdl-navigation__link" href="/rv">ReactiveVar</a>
-                <a class="mdl-navigation__link" href="/ts">Template Subscriptions</a>
-                <a class="mdl-navigation__link" href="/blah">Link 3</a>
-                <a class="mdl-navigation__link" href="/blah">Link 4</a>
-            </nav>
+    <nav>
+        <div class="nav-wrapper blue">
+            <a href="/" class="brand-logo">{{appName}}</a>
+            <a href="#" data-activates="side-nav" class="button-collapse"><i class="material-icons">menu</i></a>
+            <ul class="right hide-on-med-and-down">
+                {{> NavLinks}}
+            </ul>
+            <ul class="side-nav" id="side-nav">
+                {{> NavLinks}}
+            </ul>
         </div>
+    </nav>
 
-    </header>
 
 </template>
+
 

@@ -1,0 +1,16 @@
+<template name="ModelView">
+
+    {{> BackTo target="models list"}}
+
+    <h2>View a model</h2>
+    {{#if Template.subscriptionsReady}}
+
+        {{> quickForm collection="Models" doc=model type="readonly" meteormethod="modelUpdate" id="modelUpdateForm" buttonContent="Update" fields=fieldsToInclude}}
+    {{else}}
+        {{> Loading}}
+    {{/if}}
+
+    <!-- StepsList template with modelId passed in so it can be use to select only steps for the current model -->
+    {{> StepsList modelId=modelId}}
+
+</template>

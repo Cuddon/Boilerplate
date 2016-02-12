@@ -1,0 +1,26 @@
+<template name="StepsList">
+
+    <h2>List of Steps</h2>
+
+    {{#if Template.subscriptionsReady}}
+
+        {{#each group in groups}}
+            <h4>Group: {{group}}</h4>
+            <ul class="collection">
+                {{#each stepsInGroup group}}
+                    <li class="collection-item">
+                        <p>({{order}}) {{name}}
+                            <small>{{version}}</small>
+                        </p>
+                        <p>{{description}}</p></li>
+                {{/each}}
+            </ul>
+        {{/each}}
+
+    {{else}}
+        {{> Loading}}
+    {{/if}}
+
+    <a class="step-add-button btn-floating btn-large waves-effect waves-light red"><i class="material-icons">add</i></a>
+
+</template>

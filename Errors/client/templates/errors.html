@@ -1,0 +1,17 @@
+<template name="Errors">
+
+    <div class="row">
+
+        {{#if errors}}
+            <ul class="collection">
+                {{#each errors}}
+                    <a href="#!" class="error-item collection-item red lighten-1 white-text">{{#if moreThanOne}}
+                        ({{count}}) {{/if}}{{message}} ({{code}})
+                        <span class="badge"><i class="material-icons">close</i></span></a>
+                {{/each}}
+            </ul>
+        {{/if}}
+
+    </div>
+
+</template>

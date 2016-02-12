@@ -2,7 +2,6 @@
  * Created by andrew on 26/01/2016.
  */
 
-
 FlowRouter.route('/', {
     name : 'Home',
 
@@ -12,7 +11,7 @@ FlowRouter.route('/', {
     }],
 
     action: function(params, queryParams) {
-        BlazeLayout.render("MainLayout", {content: "Home"});
+        BlazeLayout.render("PublicLayout", {content: "Home"});
     },
 
     // Functions to run before another route is loaded. List of functions

@@ -4,7 +4,7 @@
 
 
 Template.Home.events({
-    'click button': function () {
+    'click .btn': function () {
         // increment the counter when button is clicked
         Session.set('counter', Session.get('counter') + 1);
     }

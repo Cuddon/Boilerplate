@@ -1,0 +1,53 @@
+<template name="StepAdd">
+
+    {{> BackTo target=model.name}}
+
+    <h2>Add a new step</h2>
+    {{#if Template.subscriptionsReady}}
+
+        <h5>Adding to model: {{model.name}}</h5>
+
+        {{#autoForm collection="Steps" id="stepAddForm" type="method" meteormethod="stepAdd"}}
+
+            <div class="row">
+                <div class="col s8">
+                    {{> afQuickField name='name' type="text" icon='person'}}
+                </div>
+                <div class="col s4">
+                    {{> afQuickField name='version'}}
+                </div>
+
+                <div class="col s12">
+                    {{> afQuickField name='description'}}
+                </div>
+
+                <div class="col s8">
+                    {{> afQuickField name='group'}}
+                </div>
+                <div class="col s2">
+                    {{> afQuickField name='order'}}
+                </div>
+                <div class="col s2">
+                </div>
+
+                <div class="col s8">
+                    {{> afQuickField name="stencil" options=stencilList noselect="true"}}
+                </div>
+                <div class="col s2">
+                </div>
+                <div class="col s2">
+                </div>
+            </div>
+
+            <a class="cancel-button waves-effect waves-teal btn-flat">Cancel</a>
+            <button type="submit" class="step-add-button waves-effect btn btn-primary">Add<i
+                    class="material-icons right">send</i>
+            </button>
+
+        {{/autoForm}}
+
+    {{else}}
+        {{> Loading}}
+    {{/if}}
+
+</template>
